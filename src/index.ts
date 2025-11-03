@@ -4,6 +4,8 @@ import {
 } from '@jupyterlab/application';
 import { ICommandPalette } from '@jupyterlab/apputils';
 import { ILauncher } from '@jupyterlab/launcher';
+import { imageIcon } from '@jupyterlab/ui-components';
+
 
 import { requestAPI } from './request';
 import { ImageCaptionMainAreaWidget } from './widget';
@@ -48,6 +50,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
         // Then add it to the main area:
         app.shell.add(widget, 'main');
       },
+      icon: imageIcon,
       label: 'View a random image & caption'
     });
 
